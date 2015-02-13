@@ -27,14 +27,14 @@ public class BeaconTopology {
 		.persistentAggregate(new MemoryMapState.Factory(), new Count(), new Fields("count"))
 		.newValuesStream()
 		.applyAssembly(new FirstN(10,"count"))
-		.each(new Fields("hastag","count"), new Debug());
+		.each(new Fields("hashtag","count"), new Debug());
 		return topology.build();
 	}
 	
 	
 	public static void main(String[] args) throws Exception{
 		final Config conf = new Config();
-		final IBatchSpout spout = (IBatchSpout) new BeaconSpout();
+		IBatchSpout spout = (IBatchSpout) new BeaconBatchSpout();
 		if(args.length == 0){
 			final LocalCluster local = new LocalCluster();
 			try{

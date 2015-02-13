@@ -12,7 +12,7 @@ public class HashtagExtractor extends BaseFunction {
   public void execute(TridentTuple tuple, TridentCollector collector) {
     //Get the beaconlog
 	//
-	final Beacon beacon = (Beacon)tuple.get(0);
+	final String beacon = (String)tuple.get(0);
 	System.out.println(beacon.toString());
 	collector.emit(new Values(beacon));
 	
