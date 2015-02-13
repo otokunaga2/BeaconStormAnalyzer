@@ -22,12 +22,12 @@ public class BeaconTopology {
 		final TridentTopology topology = new TridentTopology();
 		
 		topology.newStream("spout", spout)
-		.each( new Fields("tweet"), new HashtagExtractor(), new Fields("hashtag"))
-		.groupBy(new Fields("hashtag"))
+		.each( new Fields("tweet"), new HashtagExtractor(), new Fields("hashtag","rid"))
+		.groupBy(new Fields("rid"))
 		.persistentAggregate(new MemoryMapState.Factory(), new Count(), new Fields("count"))
 		.newValuesStream()
 		.applyAssembly(new FirstN(10,"count"))
-		.each(new Fields("hashtag","count"), new Debug());
+		.each(new Fields("rid","count"), new Debug());
 		return topology.build();
 	}
 	
