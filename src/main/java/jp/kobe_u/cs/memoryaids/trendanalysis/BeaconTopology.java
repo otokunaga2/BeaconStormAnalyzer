@@ -26,7 +26,7 @@ public class BeaconTopology {
 		.groupBy(new Fields("rid"))
 		.persistentAggregate(new MemoryMapState.Factory(), new Count(), new Fields("count"))
 		.newValuesStream()
-		.applyAssembly(new FirstN(10,"count"))
+//		.applyAssembly(new FirstN(10,"count"))
 		.each(new Fields("rid","count"), new Debug());
 		return topology.build();
 	}

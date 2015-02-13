@@ -20,6 +20,7 @@ public class MovingAverageFunction extends BaseFunction {
 	public void execute(TridentTuple tuple, TridentCollector collector) {
 		// TODO Auto-generated method stub
 		this.ewma.mark(tuple.getLong(0));
+		
 		collector.emit(new Values(this.ewma.getAverageRatePer(this.emtRatePer)));
 	}
 
