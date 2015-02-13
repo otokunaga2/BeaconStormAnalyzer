@@ -1,5 +1,12 @@
 package jp.kobe_u.cs.memoryaids.trendanalysis;
 
+
+
+import org.json.simple.JSONArray;
+
+import com.google.common.collect.ImmutableBiMap.Builder;
+import com.google.gson.Gson;
+
 import storm.trident.operation.BaseFunction;
 import storm.trident.operation.TridentCollector;
 import storm.trident.tuple.TridentTuple;
@@ -13,8 +20,14 @@ public class HashtagExtractor extends BaseFunction {
     //Get the beaconlog
 	//
 	final String beacon = (String)tuple.get(0);
-	System.out.println(beacon.toString());
-	collector.emit(new Values(beacon));
+	
+	
+	Gson gsonSerializer = new Gson();
+	
+	Beacon convetedBeacon = gsonSerializer.fromJson(beacon,Beacon.class);
+	System.out.println(convetedBeacon.getAccuracy());
+	
+	collector.emit(new Values(convetedBeacon.getAccuracy()));
 	
 //    final Status status = (Status) tuple.get(0);
     //Loop through the hashtags
