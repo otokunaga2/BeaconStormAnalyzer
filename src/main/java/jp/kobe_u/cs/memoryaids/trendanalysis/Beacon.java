@@ -58,7 +58,9 @@ public class Beacon {
 	public void setAccuracy(String accuracy) {
 		this.accuracy = accuracy;
 	}
-	
+	public String toString(){
+		return null;
+	}
 //	{"date":"2015-03-05 19:45:36","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.412027042116809,"rid":2}
 //	DEBUG: [{"date":"2015-03-05 19:45:36","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.412027042116809,"rid":2}, 2]
 

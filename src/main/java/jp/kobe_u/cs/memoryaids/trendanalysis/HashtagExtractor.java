@@ -27,7 +27,7 @@ public class HashtagExtractor extends BaseFunction {
 	Beacon convetedBeacon = gsonSerializer.fromJson(beacon,Beacon.class);
 	System.out.println(convetedBeacon.getAccuracy());
 	
-	collector.emit(new Values(convetedBeacon.getAccuracy(), convetedBeacon.getRid()));
+	collector.emit(new Values(gsonSerializer.toJson(convetedBeacon)));
 	
 //    final Status status = (Status) tuple.get(0);
     //Loop through the hashtags
