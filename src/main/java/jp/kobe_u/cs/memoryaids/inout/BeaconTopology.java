@@ -20,8 +20,19 @@ import storm.trident.spout.IBatchSpout;
 import storm.trident.testing.MemoryMapState;
 import jp.kobe_u.cs.memoryaids.trendanalysis.EWMA;
 public class BeaconTopology {
-
+	private static final int DEFAULT_RUNTIME_IN_SECONDS = 60;
+	private static final int TOP_N = 5;
+	private final String topologyName ="slidingWindwoCounts";
+	private Config topologyConfig;
+	private int runtiomInSeconds;
+	
+	
+	
 	public static StormTopology buildTopology(IBatchSpout spout) throws IOException{
+		
+		
+		
+		
 		final TridentTopology topology = new TridentTopology();
 		//IBatchspout//
 		Fields jsonFields = new Fields("accuracy","date","rid");
