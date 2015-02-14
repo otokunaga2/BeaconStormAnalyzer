@@ -27,13 +27,13 @@ public class BeaconTopology {
 		
 		Stream parsedStream = topology.newStream("tweet", spout);
 		
-		Stream secondPraseStream = parsedStream.each(new Fields("tweet"),new JsonProjectFunction(),new Fields("accuracy"));
+		Stream secondPraseStream = parsedStream.each(new Fields("tweet"),new JsonProjectFunction(),new Fields("timestamp"));
 //		parsedStream.each(new Fields("tweet"), new HashtagExtractor(), new Fields("sput"));
 		
 		//drop the required fields
 //		parsedStream = parsedStream.project(jsonFields);
 		EWMA ewma = new EWMA().sliding(1.0,jp.kobe_u.cs.memoryaids.trendanalysis.EWMA.Time.MINUTES).withAlpha(EWMA.ONE_MINUTE_ALPHA);
-		Stream averageStream = secondPraseStream.each(new Fields("accuracy"),
+		Stream averageStream = secondPraseStream.each(new Fields("timestamp"),
 				new MovingAverageFunction(ewma, jp.kobe_u.cs.memoryaids.trendanalysis.EWMA.Time.MINUTES), new Fields("average"));
 		ThreasholdFilterFunction tff = new ThreasholdFilterFunction(50D);
 		Stream thresholdStream = averageStream.each(new Fields("average"),tff,new Fields("change","threashold"));
