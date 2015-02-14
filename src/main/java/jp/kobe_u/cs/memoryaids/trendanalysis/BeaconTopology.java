@@ -23,16 +23,17 @@ public class BeaconTopology {
 	public static StormTopology buildTopology(IBatchSpout spout) throws IOException{
 		final TridentTopology topology = new TridentTopology();
 		//IBatchspout//
-		Fields jsonFields = new Fields("accuracy","timestamp","rid");
+		Fields jsonFields = new Fields("accuracy","date","rid");
 		
 		Stream parsedStream = topology.newStream("tweet", spout);
-//		parsedStream.each(new Fields("tweet"), new Hash)
+		
+		parsedStream.each(new Fields("tweet"),new JsonProjectFunction(jsonFields),jsonFields);
 //		parsedStream.each(new Fields("tweet"), new HashtagExtractor(), new Fields("sput"));
 		
 		//drop the required fields
-		parsedStream.project(jsonFields);
+		parsedStream = parsedStream.project(jsonFields);
 		EWMA ewma = new EWMA().sliding(1.0,jp.kobe_u.cs.memoryaids.trendanalysis.EWMA.Time.MINUTES).withAlpha(EWMA.ONE_MINUTE_ALPHA);
-		Stream averageStream = parsedStream.each(new Fields("timestamp"),
+		Stream averageStream = parsedStream.each(new Fields("tweet"),
 				new MovingAverageFunction(ewma, jp.kobe_u.cs.memoryaids.trendanalysis.EWMA.Time.MINUTES), new Fields("average"));
 		ThreasholdFilterFunction tff = new ThreasholdFilterFunction(50D);
 		Stream thresholdStream = averageStream.each(new Fields("average"),tff,new Fields("change","threashold"));
