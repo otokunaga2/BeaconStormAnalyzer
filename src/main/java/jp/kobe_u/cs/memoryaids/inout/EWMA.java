@@ -1,4 +1,4 @@
-package jp.kobe_u.cs.memoryaids.trendanalysis;
+package jp.kobe_u.cs.memoryaids.inout;
 
 import java.io.Serializable;
 
@@ -56,7 +56,7 @@ public class EWMA implements Serializable{
 	}
 	public EWMA withAlpha(double alpha){
 		if(!(alpha > 0.0D && alpha <= 1.0D)){
-			throw new IllegalArgumentException("Alpha must be between 0.0 and 1.0");
+			throw new IllegalArgumentException("Alpha must be between 0.0 and 1.9");
 		}
 		this.alpha = alpha;
 		return this;
@@ -105,7 +105,7 @@ public class EWMA implements Serializable{
 		return this.average == 0.0 ? this.average : time.getTime()/ this.average;
 		
 	}
-	///here to start the 
+	
 	
 	
 	

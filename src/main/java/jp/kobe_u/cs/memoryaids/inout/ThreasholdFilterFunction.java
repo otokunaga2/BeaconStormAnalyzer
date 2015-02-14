@@ -1,4 +1,4 @@
-package jp.kobe_u.cs.memoryaids.trendanalysis;
+package jp.kobe_u.cs.memoryaids.inout;
 
 import backtype.storm.tuple.Values;
 import storm.trident.operation.BaseFunction;
@@ -16,11 +16,11 @@ public class ThreasholdFilterFunction extends BaseFunction {
 
 	
 	private static enum State{
-		NEAR,FAR
+		NEAR,FAR,NONE
 //		BELOW, ABOVE
 	}
 	
-	private State last = State.FAR;
+	private State last = State.NONE;
 	private double threshold;
 	
 	public  ThreasholdFilterFunction(double threshold){
