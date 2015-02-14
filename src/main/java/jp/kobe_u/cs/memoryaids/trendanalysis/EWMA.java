@@ -45,11 +45,11 @@ public class EWMA implements Serializable{
 		
 	}
 	
-//	public EWMA sliding(double count,Time time){
-//		return this.sliding((long)(time.getTime()*time));
-//	}
+	public EWMA sliding(double count,Time time){
+		return this.sliding((long)(time.getTime()*count));
+	}
 	
-	public EWMA slidng(long window){
+	public EWMA sliding(long window){
 		this.sliding = true;
 		this.window = window;
 		return this;
