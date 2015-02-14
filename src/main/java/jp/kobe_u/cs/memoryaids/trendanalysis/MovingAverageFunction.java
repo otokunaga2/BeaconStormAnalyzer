@@ -2,6 +2,7 @@ package jp.kobe_u.cs.memoryaids.trendanalysis;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import jp.kobe_u.cs.memoryaids.trendanalysis.EWMA.Time;
@@ -25,12 +26,14 @@ public class MovingAverageFunction extends BaseFunction {
 		// TODO Auto-generated method stub
 		final String strDate = tuple.getString(0);
 		Date date = new Date();
+		SimpleDateFormat sf = new SimpleDateFormat("YYYY-MM-DD HH:mm:ss");
 		try {
-			date = DateFormat.getInstance().parse(strDate);
+			date = sf.parse(strDate);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+//			date = DateFormat.getInstance().parse(strDate);
 		
 		this.ewma.mark(date.getTime());
 		
