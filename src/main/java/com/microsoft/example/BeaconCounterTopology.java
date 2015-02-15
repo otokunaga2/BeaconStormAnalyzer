@@ -32,9 +32,9 @@ import storm.starter.util.StormRunner;
  * The top N computation is done in a completely scalable way, and a similar approach could be used to compute things
  * like trending topics or trending images on Twitter.
  */
-public class RollingTopWords {
+public class BeaconCounterTopology {
 
-  private static final Logger LOG = Logger.getLogger(RollingTopWords.class);
+  private static final Logger LOG = Logger.getLogger(BeaconCounterTopology.class);
   private static final int DEFAULT_RUNTIME_IN_SECONDS = 60;
   private static final int TOP_N = 5;
 
@@ -43,7 +43,7 @@ public class RollingTopWords {
   private final Config topologyConfig;
   private final int runtimeInSeconds;
 
-  public RollingTopWords(String topologyName) throws InterruptedException {
+  public BeaconCounterTopology(String topologyName) throws InterruptedException {
     builder = new TopologyBuilder();
     this.topologyName = topologyName;
     topologyConfig = createTopologyConfiguration();
@@ -61,13 +61,20 @@ public class RollingTopWords {
   private void wireTopology() throws InterruptedException {
     String spoutId = "wordGenerator";
     String counterId = "counter";
+    String splitid ="spliter";
     String intermediateRankerId = "intermediateRanker";
     String totalRankerId = "finalRanker";
     builder.setSpout(spoutId, new JedisSpout("192.168.100.106",6379,"hoge"), 5);
-    builder.setBolt(counterId, new RollingCountBolt(9, 3), 4).fieldsGrouping(spoutId, new Fields("word"));
+//    builder.setBolt(id, bolt);  
+    
+    builder.setBolt(splitid,new SplitBeaconBolt()).fieldsGrouping(spoutId, new Fields("word"));
+    builder.setBolt(counterId, new RollingCountBolt(9, 3), 4).fieldsGrouping(splitid, new Fields("accuracy","rid"));
     builder.setBolt(intermediateRankerId, new IntermediateRankingsBolt(TOP_N), 4).fieldsGrouping(counterId, new Fields(
-        "obj"));
-    builder.setBolt(totalRankerId, new TotalRankingsBolt(TOP_N)).globalGrouping(intermediateRankerId);
+            "obj"));
+    
+    
+
+//    builder.setBolt(totalRankerId, new TotalRankingsBolt(TOP_N)).globalGrouping(intermediateRankerId);
   }
 
   public void runLocally() throws InterruptedException {
@@ -119,7 +126,7 @@ public class RollingTopWords {
     }
 
     LOG.info("Topology name: " + topologyName);
-    RollingTopWords rtw = new RollingTopWords(topologyName);
+    BeaconCounterTopology rtw = new BeaconCounterTopology(topologyName);
     if (runLocally) {
       LOG.info("Running in local mode");
       rtw.runLocally();
