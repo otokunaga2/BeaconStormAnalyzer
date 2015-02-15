@@ -43,7 +43,7 @@ public class BeaconTopology {
 		EWMA ewma = new EWMA().sliding(1.0,jp.kobe_u.cs.memoryaids.trendanalysis.EWMA.Time.MINUTES).withAlpha(EWMA.ONE_MINUTE_ALPHA);
 		Stream averageStream = secondPraseStream.each(new Fields("accuracy"),
 				new MovingAverageFunction(ewma, jp.kobe_u.cs.memoryaids.trendanalysis.EWMA.Time.MINUTES), new Fields("average"));
-		ThreasholdFilterFunction tff = new ThreasholdFilterFunction(-0.5D);
+		ThreasholdFilterFunction tff = new ThreasholdFilterFunction(1.5D);
 		Stream thresholdStream = averageStream.each(new Fields("average"),tff,new Fields("change","threashold"));
 		Stream filteredStream = thresholdStream.each(new Fields("change"), new BooleanFilter());
 		
