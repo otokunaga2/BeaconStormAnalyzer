@@ -39,7 +39,8 @@ public class BeaconTopology {
 
 		Stream parsedStream = topology
 				.newStream("spout1", spout)
-				  .partitionPersist(new BeaconDBFactory(), new Fields("rid","accuracy"),new BeaconUpdater()).newValuesStream().each(new Fields("count"), new Debug());
+				  .each(new Fields("sentence"), new DataPreparation(),new Fields("rid","accuracy"))
+				  .partitionPersist(new BeaconDBFactory(), new Fields("rid","accuracy"),new BeaconUpdater()).newValuesStream().each(new Fields("[]"), new Debug());
 				
 //				.parallelismHint(16)
 //				.each(new Fields("sentence"),new FirstConvertFunction(), new Fields("rid","accuracy"))
