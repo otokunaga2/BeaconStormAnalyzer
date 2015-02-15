@@ -27,7 +27,6 @@ public class BeaconTopology {
 	private int runtiomInSeconds;
 	
 	
-	
 	public static StormTopology buildTopology(IBatchSpout spout) throws IOException{
 		
 		
@@ -44,14 +43,14 @@ public class BeaconTopology {
 		
 								
 		
-		Stream secondPraseStream = parsedStream.each(new Fields("tweet"),new FirstConvertFunction(),new Fields("beacon"));
+		Stream secondPraseStream = parsedStream.each(new Fields("tweet"),new FirstConvertFunction(),new Fields("rid"));
 		
 		Stream ridStream = secondPraseStream.groupBy(new Fields("rid"))
 //		.stateQuery(, function, functionFields)
 //		ridStream.each(inputFields, filter)
 		.persistentAggregate(new MemoryMapState.Factory(), new Count(), new Fields("count"))
 		.newValuesStream()
-		.applyAssembly(new FirstN(10, "count"))
+		.applyAssembly(new FirstN(5, "count"))
 	    .each(new Fields("rid", "count"), new Debug());
 //		
 		
