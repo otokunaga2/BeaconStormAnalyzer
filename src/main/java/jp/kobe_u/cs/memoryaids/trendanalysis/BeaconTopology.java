@@ -39,10 +39,12 @@ public class BeaconTopology {
 
 		Stream parsedStream = topology
 				.newStream("spout1", spout)
-				.parallelismHint(16)
-				.each(new Fields("sentence"),new FirstConvertFunction(), new Fields("rid","accuracy"))
-				.groupBy(new Fields("rid"))
-				.persistentAggregate(new MemoryMapState.Factory(), new Sum(), new Fields("count")).newValuesStream().each(new Fields("count"), new Debug());
+				  .partitionPersist(new BeaconDBFactory(), new Fields("rid","accuracy"),new BeaconUpdater()).newValuesStream().each(new Fields("count"), new Debug());
+				
+//				.parallelismHint(16)
+//				.each(new Fields("sentence"),new FirstConvertFunction(), new Fields("rid","accuracy"))
+//				.groupBy(new Fields("rid"))
+//				.persistentAggregate(new MemoryMapState.Factory(), new Sum(), new Fields("count")).newValuesStream().each(new Fields("count"), new Debug());
 //		TridentTopology topology = new TridentTopology();
 		
 		return topology.build();
