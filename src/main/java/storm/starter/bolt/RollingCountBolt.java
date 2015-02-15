@@ -25,7 +25,9 @@ import backtype.storm.topology.base.BaseRichBolt;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
+
 import org.apache.log4j.Logger;
+
 import storm.starter.tools.NthLastModifiedTimeTracker;
 import storm.starter.tools.SlidingWindowCounter;
 import storm.starter.util.TupleHelpers;
@@ -63,6 +65,10 @@ public class RollingCountBolt extends BaseRichBolt {
   private static final String WINDOW_LENGTH_WARNING_TEMPLATE =
       "Actual window length is %d seconds when it should be %d seconds"
           + " (you can safely ignore this warning during the startup phase)";
+  
+  
+  //add by tokunaga
+  private HashMap<String, Long> counts = null;
 
   private final SlidingWindowCounter<Object> counter;
   private final int windowLengthInSeconds;
@@ -89,6 +95,7 @@ public class RollingCountBolt extends BaseRichBolt {
   @Override
   public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
     this.collector = collector;
+	this.counts = new HashMap<String, Long>();
     lastModifiedTracker = new NthLastModifiedTimeTracker(deriveNumWindowChunksFrom(this.windowLengthInSeconds,
         this.emitFrequencyInSeconds));
   }
@@ -123,8 +130,14 @@ public class RollingCountBolt extends BaseRichBolt {
   }
 
   private void countObjAndAck(Tuple tuple) {
-    Object obj = tuple.getValue(0);
-    counter.incrementCount(obj);
+	String rid = (String) tuple.getValueByField("rid");
+	String accuracy = (String)tuple.getValueByField("accuracy");
+	System.out.println("accuracy--------------"+accuracy);
+	if(accuracy.equals("-1")){
+		counter.incrementCount(rid);
+	}
+	
+    
     collector.ack(tuple);
   }
 

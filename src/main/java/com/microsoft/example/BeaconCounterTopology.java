@@ -19,13 +19,17 @@ package com.microsoft.example;
 
 import backtype.storm.Config;
 import backtype.storm.testing.TestWordSpout;
+import backtype.storm.topology.IRichBolt;
 import backtype.storm.topology.TopologyBuilder;
 import backtype.storm.tuple.Fields;
+
 import org.apache.log4j.Logger;
+
 import storm.starter.bolt.IntermediateRankingsBolt;
 import storm.starter.bolt.RollingCountBolt;
 import storm.starter.bolt.TotalRankingsBolt;
 import storm.starter.util.StormRunner;
+import storm.trident.operation.builtin.Debug;
 
 /**
  * This topology does a continuous computation of the top N words that the topology has seen in terms of cardinality.
@@ -62,6 +66,7 @@ public class BeaconCounterTopology {
     String spoutId = "wordGenerator";
     String counterId = "counter";
     String splitid ="spliter";
+    
     String intermediateRankerId = "intermediateRanker";
     String totalRankerId = "finalRanker";
     builder.setSpout(spoutId, new JedisSpout("192.168.100.106",6379,"hoge"), 5);
@@ -69,8 +74,8 @@ public class BeaconCounterTopology {
     
     builder.setBolt(splitid,new SplitBeaconBolt()).fieldsGrouping(spoutId, new Fields("word"));
     builder.setBolt(counterId, new RollingCountBolt(9, 3), 4).fieldsGrouping(splitid, new Fields("accuracy","rid"));
-    builder.setBolt(intermediateRankerId, new IntermediateRankingsBolt(TOP_N), 4).fieldsGrouping(counterId, new Fields(
-            "obj"));
+//    builder.setBolt(intermediateRankerId, (IRichBolt) new Debug()).fieldsGrouping(counterId, new Fields(
+//            "obj"));
     
     
 

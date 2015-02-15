@@ -70,7 +70,7 @@ public class BeaconBatchSpout implements IBatchSpout {
 	@Override
 	public Fields getOutputFields() {
 		// TODO Auto-generated method stub
-		return new Fields("tweet");
+		return new Fields("sentence");
 	}
 
 }

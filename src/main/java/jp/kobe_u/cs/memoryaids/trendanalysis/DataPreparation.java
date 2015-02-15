@@ -16,13 +16,13 @@ import storm.trident.operation.BaseFunction;
 import storm.trident.operation.TridentCollector;
 import storm.trident.tuple.TridentTuple;
 
-public class JsonProjectFunction extends BaseFunction {
+public class DataPreparation extends BaseFunction {
 	private Fields fields;
 	
-	public JsonProjectFunction(){
+	public DataPreparation(){
 		
 	}
-	public JsonProjectFunction(Fields fields){
+	public DataPreparation(Fields fields){
 		this.fields = fields;
 	}
 	
@@ -36,7 +36,7 @@ public class JsonProjectFunction extends BaseFunction {
 		Gson gsonSerializer = new Gson();
 		
 		Beacon convetedBeacon = gsonSerializer.fromJson(beacon,Beacon.class);
-		System.out.println(convetedBeacon.getDate());
+		
 		String jsonBeacon = gsonSerializer.toJson(beacon);
 		
 		Values value = new Values();
@@ -62,8 +62,16 @@ public class JsonProjectFunction extends BaseFunction {
 		
 		//		tmpMap.put(  convetedBeacon.getAccuracy());
 //		Long tmpLong = Long.parseLong();
+//		Double tmpNumber = Double.valueOf();
+		Double tmpDouble = Double.valueOf(convetedBeacon.getAccuracy());
+		if(convetedBeacon.getAccuracy().equals("-1")){
+			// do nothing
+			collector.emit(new Values(0));
+		}else{
+//			collector.emit(new Values(convetedBeacon.getRid(),tmpDouble));
+			collector.emit(new Values(convetedBeacon.getRid()));
+		}
 		
-		collector.emit(new Values(convetedBeacon.getDate(),convetedBeacon.getAccuracy()));
 		
 		
 		

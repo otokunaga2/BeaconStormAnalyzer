@@ -1,0 +1,525 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.microsoft.example:BeaconAnalyzer:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 66, column 15
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:exec-maven-plugin is missing. @ line 47, column 13
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building BeaconAnalyzer 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ BeaconAnalyzer ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/tokunaga/luna_workspace/BeaconAnalyzer/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ BeaconAnalyzer ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- exec-maven-plugin:1.3.2:java (default-cli) @ BeaconAnalyzer ---
+[WARNING] Warning: killAfter is now deprecated. Do you need it ? Please comment on MEXEC-6.
+216  [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.microsoft.example.BeaconCounterTopology - Topology name: slidingWindowCounts
+241  [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.microsoft.example.BeaconCounterTopology - Running in local mode
+11032 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.zookeeper - Starting inprocess zookeeper at port 2000 and dir /tmp/2f72295c-33a8-46d9-be79-ea8a61b8773a
+11349 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Starting Nimbus with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/2da5faf3-4419-4f31-918d-ced7a47f0e25", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" [6700 6701 6702 6703], "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+11353 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Using default scheduler
+11385 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11453 [com.microsoft.example.BeaconCounterTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11475 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11530 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11536 [com.microsoft.example.BeaconCounterTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11539 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11539 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  org.apache.zookeeper.server.NIOServerCnxn - EndOfStreamException: Unable to read additional data from client sessionid 0x14b8c1bcc6c0002, likely client has closed socket
+11540 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11554 [com.microsoft.example.BeaconCounterTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11555 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11556 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  org.apache.zookeeper.server.NIOServerCnxn - EndOfStreamException: Unable to read additional data from client sessionid 0x14b8c1bcc6c0004, likely client has closed socket
+11606 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.supervisor - Starting Supervisor with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/81e6b3a4-d054-44b6-9c4c-c7a143ec8768", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1024 1025 1026), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+11611 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11624 [com.microsoft.example.BeaconCounterTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11626 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11690 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.supervisor - Starting supervisor with id 1345a1e4-0209-4be9-8ba4-68e3137c4136 at host localhost.localdomain
+11693 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.supervisor - Starting Supervisor with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/7c2f3928-3972-49ba-b02f-c5b829dccd8c", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+11695 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11699 [com.microsoft.example.BeaconCounterTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11708 [com.microsoft.example.BeaconCounterTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11709 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  org.apache.zookeeper.server.NIOServerCnxn - EndOfStreamException: Unable to read additional data from client sessionid 0x14b8c1bcc6c0008, likely client has closed socket
+11733 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.supervisor - Starting supervisor with id 3ef580dd-dde2-4a5b-a824-25d0910ae080 at host localhost.localdomain
+11839 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Received topology submission for slidingWindowCounts with conf {"topology.max.task.parallelism" nil, "topology.acker.executors" nil, "topology.kryo.register" nil, "topology.kryo.decorators" (), "topology.name" "slidingWindowCounts", "storm.id" "slidingWindowCounts-1-1423984807", "topology.debug" true}
+11890 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Activating slidingWindowCounts: slidingWindowCounts-1-1423984807
+12042 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.scheduler.EvenScheduler - Available slots: (["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1028] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1029] ["1345a1e4-0209-4be9-8ba4-68e3137c4136" 1024] ["1345a1e4-0209-4be9-8ba4-68e3137c4136" 1025] ["1345a1e4-0209-4be9-8ba4-68e3137c4136" 1026])
+12066 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Setting new assignment for topology id slidingWindowCounts-1-1423984807: #backtype.storm.daemon.common.Assignment{:master-code-dir "/tmp/2da5faf3-4419-4f31-918d-ced7a47f0e25/nimbus/stormdist/slidingWindowCounts-1-1423984807", :node->host {"3ef580dd-dde2-4a5b-a824-25d0910ae080" "localhost.localdomain"}, :executor->node+port {[2 2] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [3 3] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [4 4] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [5 5] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [6 6] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [7 7] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [8 8] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [9 9] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [10 10] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [11 11] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027], [1 1] ["3ef580dd-dde2-4a5b-a824-25d0910ae080" 1027]}, :executor->start-time-secs {[2 2] 1423984808, [3 3] 1423984808, [4 4] 1423984808, [5 5] 1423984808, [6 6] 1423984808, [7 7] 1423984808, [8 8] 1423984808, [9 9] 1423984808, [10 10] 1423984808, [11 11] 1423984808, [1 1] 1423984808}}
+12705 [Thread-8] INFO  backtype.storm.daemon.supervisor - Downloading code for storm id slidingWindowCounts-1-1423984807 from /tmp/2da5faf3-4419-4f31-918d-ced7a47f0e25/nimbus/stormdist/slidingWindowCounts-1-1423984807
+12709 [Thread-8] INFO  backtype.storm.daemon.supervisor - Finished downloading code for storm id slidingWindowCounts-1-1423984807 from /tmp/2da5faf3-4419-4f31-918d-ced7a47f0e25/nimbus/stormdist/slidingWindowCounts-1-1423984807
+12766 [Thread-9] INFO  backtype.storm.daemon.supervisor - Launching worker with assignment #backtype.storm.daemon.supervisor.LocalAssignment{:storm-id "slidingWindowCounts-1-1423984807", :executors ([2 2] [3 3] [4 4] [5 5] [6 6] [7 7] [8 8] [9 9] [10 10] [11 11] [1 1])} for this supervisor 3ef580dd-dde2-4a5b-a824-25d0910ae080 on port 1027 with id e654fa00-57c4-4a54-8fc6-0075bc3d8158
+12806 [Thread-9] INFO  backtype.storm.daemon.worker - Launching worker for slidingWindowCounts-1-1423984807 on 3ef580dd-dde2-4a5b-a824-25d0910ae080:1027 with id e654fa00-57c4-4a54-8fc6-0075bc3d8158 and conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/7c2f3928-3972-49ba-b02f-c5b829dccd8c", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+12810 [Thread-9] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+12832 [Thread-9-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+12846 [Thread-9] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+13162 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor counter:[2 2]
+13170 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: counter __system ["startup"]
+13171 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks counter:[2 2]
+13182 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor counter:[2 2]
+13218 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Preparing bolt counter:(2)
+13226 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Prepared bolt counter:(2)
+13221 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor counter:[3 3]
+13227 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: counter __system ["startup"]
+13227 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks counter:[3 3]
+13242 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor counter:[3 3]
+13253 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Preparing bolt counter:(3)
+13261 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Prepared bolt counter:(3)
+13256 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor counter:[4 4]
+13265 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: counter __system ["startup"]
+13277 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks counter:[4 4]
+13280 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor counter:[4 4]
+13292 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Preparing bolt counter:(4)
+13292 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Prepared bolt counter:(4)
+13298 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor counter:[5 5]
+13311 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: counter __system ["startup"]
+13311 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks counter:[5 5]
+13313 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor counter:[5 5]
+13323 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Preparing bolt counter:(5)
+13324 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Prepared bolt counter:(5)
+13336 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor spliter:[6 6]
+13340 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: spliter __system ["startup"]
+13356 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks spliter:[6 6]
+13368 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor spliter:[6 6]
+13386 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Preparing bolt spliter:(6)
+13387 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Prepared bolt spliter:(6)
+13387 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor wordGenerator:[7 7]
+13392 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: wordGenerator __system ["startup"]
+13397 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks wordGenerator:[7 7]
+13418 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor wordGenerator:[7 7]
+13419 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.executor - Opening spout wordGenerator:(7)
+13432 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor wordGenerator:[8 8]
+13448 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: wordGenerator __system ["startup"]
+13448 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks wordGenerator:[8 8]
+13479 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor wordGenerator:[8 8]
+13497 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.executor - Opening spout wordGenerator:(8)
+13548 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor wordGenerator:[9 9]
+13571 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: wordGenerator __system ["startup"]
+13580 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks wordGenerator:[9 9]
+13679 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.executor - Opened spout wordGenerator:(8)
+13680 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.executor - Activating spout wordGenerator:(8)
+13681 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.executor - Opened spout wordGenerator:(7)
+13737 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.executor - Activating spout wordGenerator:(7)
+13769 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor wordGenerator:[9 9]
+13770 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.executor - Opening spout wordGenerator:(9)
+13772 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.executor - Opened spout wordGenerator:(9)
+13785 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.executor - Activating spout wordGenerator:(9)
+13806 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor wordGenerator:[10 10]
+13807 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: wordGenerator __system ["startup"]
+13822 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks wordGenerator:[10 10]
+13871 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor wordGenerator:[10 10]
+13875 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.executor - Opening spout wordGenerator:(10)
+13876 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.executor - Opened spout wordGenerator:(10)
+13876 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.executor - Activating spout wordGenerator:(10)
+13887 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor wordGenerator:[11 11]
+13890 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:56","major":1,"rssi":-92,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.191992582707444,"rid":2}]
+13892 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:56","major":1,"rssi":-92,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.191992582707444,"rid":2}]
+13892 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:57","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.880174123277737,"rid":1}]
+13895 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: wordGenerator __system ["startup"]
+13897 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:9, stream: default, id: {}, [{"date":"2015-03-07 19:10:56","major":1,"rssi":-92,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.191992582707444,"rid":2}]
+13917 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:56","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.902872408903039,"rid":1}]
+13920 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:56","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.902872408903039,"rid":1}]
+13896 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:57","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.880174123277737,"rid":1}]
+13924 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks wordGenerator:[11 11]
+13928 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:55","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.087990757962258,"rid":2}]
+13930 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:55","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.087990757962258,"rid":2}]
+13931 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:55","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.971302113402936,"rid":1}]
+13932 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:55","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.971302113402936,"rid":1}]
+13933 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:54","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.076784357476173,"rid":2}]
+13937 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:54","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.076784357476173,"rid":2}]
+13937 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:54","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.002542892469194,"rid":1}]
+13966 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:53","major":1,"rssi":-91,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.028643931045842,"rid":2}]
+13967 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:54","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.002542892469194,"rid":1}]
+13972 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:53","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.996533254197877,"rid":1}]
+13973 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:53","major":1,"rssi":-91,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.028643931045842,"rid":2}]
+13982 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:53","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.996533254197877,"rid":1}]
+13983 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:52","major":1,"rssi":-91,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.947359797225791,"rid":2}]
+14000 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor wordGenerator:[11 11]
+14007 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.executor - Opening spout wordGenerator:(11)
+14008 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.executor - Opened spout wordGenerator:(11)
+14033 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.executor - Activating spout wordGenerator:(11)
+14011 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:52","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.078485872055961,"rid":1}]
+14008 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:52","major":1,"rssi":-91,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.947359797225791,"rid":2}]
+14008 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:52","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.078485872055961,"rid":1}]
+14050 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:51","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.863561337624981,"rid":2}]
+14051 [Thread-28-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:51","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.863561337624981,"rid":2}]
+14052 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:51","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.172150055077789,"rid":1}]
+14055 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:51","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.172150055077789,"rid":1}]
+14059 [Thread-31-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:50","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.839755105913277,"rid":2}]
+14070 [Thread-33-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:50","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.839755105913277,"rid":2}]
+14087 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor __system:[-1 -1]
+14089 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:50","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.225933814303755,"rid":1}]
+14095 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: __system __system ["startup"]
+14095 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks __system:[-1 -1]
+14101 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:50","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.225933814303755,"rid":1}]
+14108 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:49","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.814645524210703,"rid":2}]
+14124 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:49","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.814645524210703,"rid":2}]
+14134 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:49","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.287025492256875,"rid":1}]
+14136 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor __system:[-1 -1]
+14144 [Thread-37-__system] INFO  backtype.storm.daemon.executor - Preparing bolt __system:(-1)
+14164 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:49","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.287025492256875,"rid":1}]
+14185 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:48","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.788175310018786,"rid":2}]
+14199 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:48","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.788175310018786,"rid":2}]
+14216 [Thread-37-__system] INFO  backtype.storm.daemon.executor - Prepared bolt __system:(-1)
+14222 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:48","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.357075381661057,"rid":1}]
+14221 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor __acker:[1 1]
+14220 [Thread-35-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:48","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.357075381661057,"rid":1}]
+14239 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:47","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.841121718543243,"rid":2}]
+14240 [Thread-9] INFO  backtype.storm.daemon.task - Emitting: __acker __system ["startup"]
+14241 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks __acker:[1 1]
+14249 [Thread-26-wordGenerator] INFO  backtype.storm.daemon.task - Emitting: wordGenerator default [{"date":"2015-03-07 19:10:47","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.841121718543243,"rid":2}]
+14270 [Thread-9] INFO  backtype.storm.daemon.executor - Timeouts disabled for executor __acker:[1 1]
+14270 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor __acker:[1 1]
+14271 [Thread-9] INFO  backtype.storm.daemon.worker - Launching receive-thread for 3ef580dd-dde2-4a5b-a824-25d0910ae080:1027
+14285 [Thread-39-__acker] INFO  backtype.storm.daemon.executor - Preparing bolt __acker:(1)
+14306 [Thread-39-__acker] INFO  backtype.storm.daemon.executor - Prepared bolt __acker:(1)
+14336 [Thread-9] INFO  backtype.storm.daemon.worker - Worker has topology config {"storm.id" "slidingWindowCounts-1-1423984807", "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/7c2f3928-3972-49ba-b02f-c5b829dccd8c", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.kryo.decorators" (), "topology.name" "slidingWindowCounts", "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.debug" true, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.kryo.register" nil, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+14336 [Thread-9] INFO  backtype.storm.daemon.worker - Worker e654fa00-57c4-4a54-8fc6-0075bc3d8158 for storm slidingWindowCounts-1-1423984807 on 3ef580dd-dde2-4a5b-a824-25d0910ae080:1027 has finished loading
+14416 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [5.191992582707444, 2]
+14417 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [5.191992582707444, 2]
+accuracy--------------5.191992582707444
+14419 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:8, stream: default, id: {}, [{"date":"2015-03-07 19:10:57","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.880174123277737,"rid":1}]
+14420 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [3.880174123277737, 1]
+14420 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [3.880174123277737, 1]
+accuracy--------------3.880174123277737
+14420 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:10, stream: default, id: {}, [{"date":"2015-03-07 19:10:56","major":1,"rssi":-92,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.191992582707444,"rid":2}]
+14420 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [5.191992582707444, 2]
+14421 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [5.191992582707444, 2]
+accuracy--------------5.191992582707444
+14421 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:9, stream: default, id: {}, [{"date":"2015-03-07 19:10:56","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.902872408903039,"rid":1}]
+14422 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [3.902872408903039, 1]
+14422 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [3.902872408903039, 1]
+accuracy--------------3.902872408903039
+14422 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:8, stream: default, id: {}, [{"date":"2015-03-07 19:10:56","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.902872408903039,"rid":1}]
+14423 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [3.902872408903039, 1]
+14423 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [3.902872408903039, 1]
+accuracy--------------3.902872408903039
+14423 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:7, stream: default, id: {}, [{"date":"2015-03-07 19:10:57","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.880174123277737,"rid":1}]
+14423 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [3.880174123277737, 1]
+14424 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [3.880174123277737, 1]
+accuracy--------------3.880174123277737
+14424 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:8, stream: default, id: {}, [{"date":"2015-03-07 19:10:55","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.087990757962258,"rid":2}]
+14424 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [5.087990757962258, 2]
+14424 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [5.087990757962258, 2]
+accuracy--------------5.087990757962258
+14425 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:10, stream: default, id: {}, [{"date":"2015-03-07 19:10:55","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.087990757962258,"rid":2}]
+14425 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [5.087990757962258, 2]
+14425 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [5.087990757962258, 2]
+accuracy--------------5.087990757962258
+14425 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:9, stream: default, id: {}, [{"date":"2015-03-07 19:10:55","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.971302113402936,"rid":1}]
+14426 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [3.971302113402936, 1]
+14426 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [3.971302113402936, 1]
+accuracy--------------3.971302113402936
+14427 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:7, stream: default, id: {}, [{"date":"2015-03-07 19:10:55","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.971302113402936,"rid":1}]
+14432 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [3.971302113402936, 1]
+14433 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [3.971302113402936, 1]
+accuracy--------------3.971302113402936
+14437 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:8, stream: default, id: {}, [{"date":"2015-03-07 19:10:54","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.076784357476173,"rid":2}]
+14437 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [5.076784357476173, 2]
+14438 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [5.076784357476173, 2]
+accuracy--------------5.076784357476173
+14439 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:9, stream: default, id: {}, [{"date":"2015-03-07 19:10:54","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.002542892469194,"rid":1}]
+14439 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.002542892469194, 1]
+14439 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.002542892469194, 1]
+accuracy--------------4.002542892469194
+14439 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:10, stream: default, id: {}, [{"date":"2015-03-07 19:10:54","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.076784357476173,"rid":2}]
+14440 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [5.076784357476173, 2]
+14440 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [5.076784357476173, 2]
+accuracy--------------5.076784357476173
+14440 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:7, stream: default, id: {}, [{"date":"2015-03-07 19:10:53","major":1,"rssi":-91,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.028643931045842,"rid":2}]
+14440 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [5.028643931045842, 2]
+14440 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [5.028643931045842, 2]
+accuracy--------------5.028643931045842
+14441 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:8, stream: default, id: {}, [{"date":"2015-03-07 19:10:54","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.002542892469194,"rid":1}]
+14441 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.002542892469194, 1]
+14441 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.002542892469194, 1]
+accuracy--------------4.002542892469194
+14441 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:10, stream: default, id: {}, [{"date":"2015-03-07 19:10:53","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.996533254197877,"rid":1}]
+14454 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [3.996533254197877, 1]
+14457 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [3.996533254197877, 1]
+accuracy--------------3.996533254197877
+14459 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:9, stream: default, id: {}, [{"date":"2015-03-07 19:10:53","major":1,"rssi":-91,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":5.028643931045842,"rid":2}]
+14459 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [5.028643931045842, 2]
+14462 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [5.028643931045842, 2]
+accuracy--------------5.028643931045842
+14462 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:8, stream: default, id: {}, [{"date":"2015-03-07 19:10:53","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":3.996533254197877,"rid":1}]
+14463 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [3.996533254197877, 1]
+14468 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [3.996533254197877, 1]
+accuracy--------------3.996533254197877
+14468 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:10, stream: default, id: {}, [{"date":"2015-03-07 19:10:52","major":1,"rssi":-91,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.947359797225791,"rid":2}]
+14469 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.947359797225791, 2]
+14470 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.947359797225791, 2]
+accuracy--------------4.947359797225791
+14470 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:8, stream: default, id: {}, [{"date":"2015-03-07 19:10:52","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.078485872055961,"rid":1}]
+14471 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.078485872055961, 1]
+14474 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.078485872055961, 1]
+accuracy--------------4.078485872055961
+14474 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:9, stream: default, id: {}, [{"date":"2015-03-07 19:10:52","major":1,"rssi":-85,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.078485872055961,"rid":1}]
+14475 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.078485872055961, 1]
+14475 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.078485872055961, 1]
+accuracy--------------4.078485872055961
+14475 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:10, stream: default, id: {}, [{"date":"2015-03-07 19:10:51","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.863561337624981,"rid":2}]
+14475 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.863561337624981, 2]
+14476 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.863561337624981, 2]
+accuracy--------------4.863561337624981
+14476 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:8, stream: default, id: {}, [{"date":"2015-03-07 19:10:51","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.863561337624981,"rid":2}]
+14476 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.863561337624981, 2]
+14476 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.863561337624981, 2]
+accuracy--------------4.863561337624981
+14477 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:9, stream: default, id: {}, [{"date":"2015-03-07 19:10:51","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.172150055077789,"rid":1}]
+14477 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.172150055077789, 1]
+14477 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.172150055077789, 1]
+accuracy--------------4.172150055077789
+14477 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:10, stream: default, id: {}, [{"date":"2015-03-07 19:10:51","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.172150055077789,"rid":1}]
+14477 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.172150055077789, 1]
+14478 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.172150055077789, 1]
+accuracy--------------4.172150055077789
+14478 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:9, stream: default, id: {}, [{"date":"2015-03-07 19:10:50","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.839755105913277,"rid":2}]
+14478 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.839755105913277, 2]
+14478 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.839755105913277, 2]
+accuracy--------------4.839755105913277
+14479 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:10, stream: default, id: {}, [{"date":"2015-03-07 19:10:50","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.839755105913277,"rid":2}]
+14479 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.839755105913277, 2]
+14488 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.839755105913277, 2]
+accuracy--------------4.839755105913277
+14488 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:11, stream: default, id: {}, [{"date":"2015-03-07 19:10:50","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.225933814303755,"rid":1}]
+14489 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.225933814303755, 1]
+14489 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.225933814303755, 1]
+accuracy--------------4.225933814303755
+14490 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:11, stream: default, id: {}, [{"date":"2015-03-07 19:10:50","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.225933814303755,"rid":1}]
+14491 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.225933814303755, 1]
+14491 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.225933814303755, 1]
+accuracy--------------4.225933814303755
+14491 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:11, stream: default, id: {}, [{"date":"2015-03-07 19:10:49","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.814645524210703,"rid":2}]
+14497 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.814645524210703, 2]
+14498 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.814645524210703, 2]
+accuracy--------------4.814645524210703
+14498 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:11, stream: default, id: {}, [{"date":"2015-03-07 19:10:49","major":1,"rssi":-89,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.814645524210703,"rid":2}]
+14499 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.814645524210703, 2]
+14499 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.814645524210703, 2]
+accuracy--------------4.814645524210703
+14500 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:11, stream: default, id: {}, [{"date":"2015-03-07 19:10:49","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.287025492256875,"rid":1}]
+14500 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.287025492256875, 1]
+14500 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.287025492256875, 1]
+accuracy--------------4.287025492256875
+14500 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:7, stream: default, id: {}, [{"date":"2015-03-07 19:10:52","major":1,"rssi":-91,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.947359797225791,"rid":2}]
+14500 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.947359797225791, 2]
+14501 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.947359797225791, 2]
+accuracy--------------4.947359797225791
+14501 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:11, stream: default, id: {}, [{"date":"2015-03-07 19:10:49","major":1,"rssi":-86,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.287025492256875,"rid":1}]
+14501 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.287025492256875, 1]
+14501 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.287025492256875, 1]
+accuracy--------------4.287025492256875
+14506 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:11, stream: default, id: {}, [{"date":"2015-03-07 19:10:48","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.788175310018786,"rid":2}]
+14506 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.788175310018786, 2]
+14506 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.788175310018786, 2]
+accuracy--------------4.788175310018786
+14507 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:7, stream: default, id: {}, [{"date":"2015-03-07 19:10:48","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.788175310018786,"rid":2}]
+14507 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.788175310018786, 2]
+14507 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.788175310018786, 2]
+accuracy--------------4.788175310018786
+14508 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:7, stream: default, id: {}, [{"date":"2015-03-07 19:10:48","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.357075381661057,"rid":1}]
+14508 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.357075381661057, 1]
+14508 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.357075381661057, 1]
+accuracy--------------4.357075381661057
+14508 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:11, stream: default, id: {}, [{"date":"2015-03-07 19:10:48","major":1,"rssi":-90,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.357075381661057,"rid":1}]
+14509 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.357075381661057, 1]
+14509 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.357075381661057, 1]
+accuracy--------------4.357075381661057
+14509 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:7, stream: default, id: {}, [{"date":"2015-03-07 19:10:47","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.841121718543243,"rid":2}]
+14509 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.841121718543243, 2]
+14518 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.841121718543243, 2]
+accuracy--------------4.841121718543243
+14519 [Thread-24-spliter] INFO  backtype.storm.daemon.executor - Processing received message source: wordGenerator:7, stream: default, id: {}, [{"date":"2015-03-07 19:10:47","major":1,"rssi":-87,"uuid":"DFE7A87B-F80B-1801-BF45-001C4D79EA56","minor":1,"proximity":"Far","accuracy":4.841121718543243,"rid":2}]
+14520 [Thread-24-spliter] INFO  backtype.storm.daemon.task - Emitting: spliter default [4.841121718543243, 2]
+14523 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: spliter:6, stream: default, id: {}, [4.841121718543243, 2]
+accuracy--------------4.841121718543243
+16182 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+16183 [Thread-16-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 2 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+16243 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+16243 [Thread-18-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 2 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+16280 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+16280 [Thread-20-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 2 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+16314 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+16315 [Thread-22-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 2 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+19183 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+19183 [Thread-16-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 5 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+19243 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+19243 [Thread-18-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 5 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+19280 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+19280 [Thread-20-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 5 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+19314 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+19315 [Thread-22-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 5 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+22183 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+22183 [Thread-16-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 8 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+22244 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+22244 [Thread-18-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 8 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+22280 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+22281 [Thread-20-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 8 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+22315 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+22316 [Thread-22-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 8 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+25183 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+25244 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+25281 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+25316 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+28183 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+28244 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+28282 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+28317 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+31184 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+31244 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+31282 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+31318 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+34185 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+34245 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+34283 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+34318 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+37187 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+37246 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+37283 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+37319 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+40187 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+40247 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+40284 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+40318 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+43187 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+43247 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+43285 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+43319 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+46187 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+46246 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+46286 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+46319 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+49188 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+49246 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+49286 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+49319 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+52189 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+52246 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+52246 [Thread-18-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 8 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+52286 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+52320 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+55189 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+55247 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+55287 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+55321 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+58189 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+58246 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+58247 [Thread-18-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 8 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+58288 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+58322 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+61190 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+61247 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+61289 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+61322 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+64190 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+64247 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+64290 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+64322 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+67191 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+67246 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+67292 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+67323 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+70192 [Thread-16-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+70246 [Thread-18-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+70246 [Thread-18-counter] WARN  storm.starter.bolt.RollingCountBolt - Actual window length is 8 seconds when it should be 9 seconds (you can safely ignore this warning during the startup phase)
+70292 [Thread-20-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+70323 [Thread-22-counter] INFO  backtype.storm.daemon.executor - Processing received message source: __system:-1, stream: __tick, id: {}, [3]
+72106 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Delaying event :remove for 30 secs for slidingWindowCounts-1-1423984807
+72111 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Updated slidingWindowCounts-1-1423984807 with status {:type :killed, :kill-time-secs 30}
+72111 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Shutting down master
+72113 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.nimbus - Shut down master
+72116 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.supervisor - Shutting down supervisor 1345a1e4-0209-4be9-8ba4-68e3137c4136
+72116 [Thread-5] INFO  backtype.storm.event - Event manager interrupted
+72121 [Thread-6] INFO  backtype.storm.event - Event manager interrupted
+72123 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.supervisor - Shutting down 3ef580dd-dde2-4a5b-a824-25d0910ae080:e654fa00-57c4-4a54-8fc6-0075bc3d8158
+72123 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.process-simulator - Killing process 019dc5f2-807c-468a-b641-737e193b159f
+72124 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shutting down worker slidingWindowCounts-1-1423984807 3ef580dd-dde2-4a5b-a824-25d0910ae080 1027
+72124 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shutting down receive thread
+72124 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.messaging.loader - Shutting down receiving-thread: [slidingWindowCounts-1-1423984807, 1027]
+72125 [Thread-40] INFO  backtype.storm.messaging.loader - Receiving-thread:[slidingWindowCounts-1-1423984807, 1027] received shutdown notice
+72125 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.messaging.loader - Waiting for receiving-thread:[slidingWindowCounts-1-1423984807, 1027] to die
+72125 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.messaging.loader - Shutdown receiving-thread: [slidingWindowCounts-1-1423984807, 1027]
+72125 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shut down receive thread
+72125 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Terminating messaging context
+72125 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shutting down executors
+72125 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor counter:[2 2]
+72126 [Thread-16-counter] INFO  backtype.storm.util - Async loop interrupted!
+72126 [Thread-15] INFO  backtype.storm.util - Async loop interrupted!
+72126 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor counter:[2 2]
+72127 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor counter:[3 3]
+72127 [Thread-18-counter] INFO  backtype.storm.util - Async loop interrupted!
+72127 [Thread-17] INFO  backtype.storm.util - Async loop interrupted!
+72127 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor counter:[3 3]
+72127 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor counter:[4 4]
+72127 [Thread-20-counter] INFO  backtype.storm.util - Async loop interrupted!
+72128 [Thread-19] INFO  backtype.storm.util - Async loop interrupted!
+72128 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor counter:[4 4]
+72128 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor counter:[5 5]
+72128 [Thread-22-counter] INFO  backtype.storm.util - Async loop interrupted!
+72128 [Thread-21] INFO  backtype.storm.util - Async loop interrupted!
+72128 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor counter:[5 5]
+72129 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor spliter:[6 6]
+72129 [Thread-24-spliter] INFO  backtype.storm.util - Async loop interrupted!
+72129 [Thread-23] INFO  backtype.storm.util - Async loop interrupted!
+72129 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor spliter:[6 6]
+72129 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor wordGenerator:[7 7]
+72130 [Thread-25] INFO  backtype.storm.util - Async loop interrupted!
+72131 [Thread-26-wordGenerator] INFO  backtype.storm.util - Async loop interrupted!
+72131 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor wordGenerator:[7 7]
+72131 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor wordGenerator:[8 8]
+72132 [Thread-27] INFO  backtype.storm.util - Async loop interrupted!
+72132 [Thread-28-wordGenerator] INFO  backtype.storm.util - Async loop interrupted!
+72132 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor wordGenerator:[8 8]
+72139 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor wordGenerator:[9 9]
+72142 [Thread-30] INFO  backtype.storm.util - Async loop interrupted!
+72143 [Thread-31-wordGenerator] INFO  backtype.storm.util - Async loop interrupted!
+72144 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor wordGenerator:[9 9]
+72147 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor wordGenerator:[10 10]
+72147 [Thread-32] INFO  backtype.storm.util - Async loop interrupted!
+72147 [Thread-33-wordGenerator] INFO  backtype.storm.util - Async loop interrupted!
+72148 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor wordGenerator:[10 10]
+72148 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor wordGenerator:[11 11]
+72148 [Thread-34] INFO  backtype.storm.util - Async loop interrupted!
+72151 [Thread-35-wordGenerator] INFO  backtype.storm.util - Async loop interrupted!
+72151 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor wordGenerator:[11 11]
+72151 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor __system:[-1 -1]
+72152 [Thread-37-__system] INFO  backtype.storm.util - Async loop interrupted!
+72152 [Thread-36] INFO  backtype.storm.util - Async loop interrupted!
+72152 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor __system:[-1 -1]
+72157 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shutting down executor __acker:[1 1]
+72157 [Thread-39-__acker] INFO  backtype.storm.util - Async loop interrupted!
+72157 [Thread-38] INFO  backtype.storm.util - Async loop interrupted!
+72158 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.executor - Shut down executor __acker:[1 1]
+72158 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shut down executors
+72158 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shutting down transfer thread
+72158 [Thread-41] INFO  backtype.storm.util - Async loop interrupted!
+72158 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shut down transfer thread
+72159 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shutting down default resources
+72161 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shut down default resources
+72165 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Disconnecting from storm cluster state context
+72181 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.worker - Shut down worker slidingWindowCounts-1-1423984807 3ef580dd-dde2-4a5b-a824-25d0910ae080 1027
+72189 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.supervisor - Shut down 3ef580dd-dde2-4a5b-a824-25d0910ae080:e654fa00-57c4-4a54-8fc6-0075bc3d8158
+72190 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.daemon.supervisor - Shutting down supervisor 3ef580dd-dde2-4a5b-a824-25d0910ae080
+72193 [Thread-8] INFO  backtype.storm.event - Event manager interrupted
+72193 [Thread-9] INFO  backtype.storm.event - Event manager interrupted
+72197 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.testing - Shutting down in process zookeeper
+72201 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.testing - Done shutting down in process zookeeper
+72201 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.testing - Deleting temporary path /tmp/2da5faf3-4419-4f31-918d-ced7a47f0e25
+72202 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.testing - Deleting temporary path /tmp/2f72295c-33a8-46d9-be79-ea8a61b8773a
+72210 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.testing - Deleting temporary path /tmp/81e6b3a4-d054-44b6-9c4c-c7a143ec8768
+72224 [com.microsoft.example.BeaconCounterTopology.main()] INFO  backtype.storm.testing - Deleting temporary path /tmp/7c2f3928-3972-49ba-b02f-c5b829dccd8c
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:16 min
+[INFO] Finished at: 2015-02-15T16:21:10+09:00
+[INFO] Final Memory: 19M/178M
+[INFO] ------------------------------------------------------------------------

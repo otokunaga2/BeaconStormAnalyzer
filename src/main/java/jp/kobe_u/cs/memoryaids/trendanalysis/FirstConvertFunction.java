@@ -21,9 +21,12 @@ public class FirstConvertFunction extends BaseFunction {
 		System.out.println(convetedBeacon.getDate());
 		String jsonBeacon = gsonSerializer.toJson(beacon);
 		
-
+		if(convetedBeacon.getAccuracy().equals("-1")){
+			//do nothing 
+		}else{
+			collector.emit(new Values(convetedBeacon.getRid(),convetedBeacon.getAccuracy()));
+		}
 		
-		collector.emit(new Values(convetedBeacon.getRid()));
 		
 	}
 
