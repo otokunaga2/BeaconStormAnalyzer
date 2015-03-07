@@ -2,7 +2,7 @@ package jp.kobe_u.cs.memoryaids.trendanalysis;
 
 import java.io.Serializable;
 
-public class EWMA implements Serializable{
+public class CopyOfEWMA_origin implements Serializable{
 
 	/**
 	 * 
@@ -41,20 +41,20 @@ public class EWMA implements Serializable{
 	private double alpha = -1D;
 	private boolean sliding = false;
 	private double average;
-	public EWMA(){
+	public CopyOfEWMA_origin(){
 		
 	}
 	
-	public EWMA sliding(double count,Time time){
+	public CopyOfEWMA_origin sliding(double count,Time time){
 		return this.sliding((long)(time.getTime()*count));
 	}
 	
-	public EWMA sliding(long window){
+	public CopyOfEWMA_origin sliding(long window){
 		this.sliding = true;
 		this.window = window;
 		return this;
 	}
-	public EWMA withAlpha(double alpha){
+	public CopyOfEWMA_origin withAlpha(double alpha){
 		if(!(alpha > 0.0D && alpha <= 1.0D)){
 			throw new IllegalArgumentException("Alpha must be between 0.0 and 1.0");
 		}
@@ -62,14 +62,14 @@ public class EWMA implements Serializable{
 		return this;
 	}
 	
-	public EWMA withAlphaWIndow(long alphaWindow){
+	public CopyOfEWMA_origin withAlphaWIndow(long alphaWindow){
 		this.alpha = -1;
 		this.alphaWindow = alphaWindow;
 		return this;
 	}
 	
 	
-	public EWMA withAlphaWindow(double count, Time time){
+	public CopyOfEWMA_origin withAlphaWindow(double count, Time time){
 		return this.withAlphaWIndow((long)(time.getTime() * count));
 	}
 	public void mark(){

@@ -1,4 +1,4 @@
-package jp.kobe_u.cs.memoryaids.trendanalysis;
+package jp.kobe_u.cs.memoryaids.inout;
 
 public class Beacon {
 

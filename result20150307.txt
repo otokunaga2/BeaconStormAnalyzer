@@ -1,0 +1,941 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.microsoft.example:BeaconAnalyzer:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 60, column 15
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:exec-maven-plugin is missing. @ line 41, column 13
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building BeaconAnalyzer 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ BeaconAnalyzer ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/tokunaga/luna_workspace/BeaconAnalyzer/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ BeaconAnalyzer ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- exec-maven-plugin:1.3.2:java (default-cli) @ BeaconAnalyzer ---
+[WARNING] Warning: killAfter is now deprecated. Do you need it ? Please comment on MEXEC-6.
+10884 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.zookeeper - Starting inprocess zookeeper at port 2000 and dir /tmp/7a3a849e-ddfe-4bcd-94b0-d2312e104757
+11205 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.nimbus - Starting Nimbus with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/d1acfa92-75c1-45f7-91f3-0d7f895f9bac", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" [6700 6701 6702 6703], "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+11209 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.nimbus - Using default scheduler
+11254 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11309 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11331 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11373 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11380 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11382 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11390 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11396 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11398 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11398 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  org.apache.zookeeper.server.NIOServerCnxn - EndOfStreamException: Unable to read additional data from client sessionid 0x14b8835f3060004, likely client has closed socket
+11434 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.supervisor - Starting Supervisor with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/19839f3d-ed09-4f4e-80dc-3029e0468801", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1024 1025 1026), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+11466 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11485 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11493 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11549 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.supervisor - Starting supervisor with id 545f0d12-2b67-4561-ac22-81d59ed2f5e3 at host localhost.localdomain
+11555 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.supervisor - Starting Supervisor with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/de44b361-3756-47b6-81cd-ccf127aacf3d", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+11558 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11569 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+11571 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+11603 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.supervisor - Starting supervisor with id ef6b0f59-d80c-4c12-8391-db5b0712d42e at host localhost.localdomain
+11778 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.nimbus - Received topology submission for log-analysis-topology with conf {"topology.max.task.parallelism" nil, "topology.acker.executors" nil, "topology.kryo.register" {"storm.trident.topology.TransactionAttempt" nil}, "topology.kryo.decorators" (), "topology.name" "log-analysis-topology", "storm.id" "log-analysis-topology-1-1423919412"}
+11799 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.nimbus - Activating log-analysis-topology: log-analysis-topology-1-1423919412
+11997 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.scheduler.EvenScheduler - Available slots: (["ef6b0f59-d80c-4c12-8391-db5b0712d42e" 1027] ["ef6b0f59-d80c-4c12-8391-db5b0712d42e" 1028] ["ef6b0f59-d80c-4c12-8391-db5b0712d42e" 1029] ["545f0d12-2b67-4561-ac22-81d59ed2f5e3" 1024] ["545f0d12-2b67-4561-ac22-81d59ed2f5e3" 1025] ["545f0d12-2b67-4561-ac22-81d59ed2f5e3" 1026])
+12076 [jp.kobe_u.cs.memoryaids.trendanalysis.BeaconTopology.main()] INFO  backtype.storm.daemon.nimbus - Setting new assignment for topology id log-analysis-topology-1-1423919412: #backtype.storm.daemon.common.Assignment{:master-code-dir "/tmp/d1acfa92-75c1-45f7-91f3-0d7f895f9bac/nimbus/stormdist/log-analysis-topology-1-1423919412", :node->host {"ef6b0f59-d80c-4c12-8391-db5b0712d42e" "localhost.localdomain"}, :executor->node+port {[3 3] ["ef6b0f59-d80c-4c12-8391-db5b0712d42e" 1027], [5 5] ["ef6b0f59-d80c-4c12-8391-db5b0712d42e" 1027], [4 4] ["ef6b0f59-d80c-4c12-8391-db5b0712d42e" 1027], [2 2] ["ef6b0f59-d80c-4c12-8391-db5b0712d42e" 1027], [1 1] ["ef6b0f59-d80c-4c12-8391-db5b0712d42e" 1027]}, :executor->start-time-secs {[1 1] 1423919413, [2 2] 1423919413, [4 4] 1423919413, [5 5] 1423919413, [3 3] 1423919413}}
+12571 [Thread-8] INFO  backtype.storm.daemon.supervisor - Downloading code for storm id log-analysis-topology-1-1423919412 from /tmp/d1acfa92-75c1-45f7-91f3-0d7f895f9bac/nimbus/stormdist/log-analysis-topology-1-1423919412
+12581 [Thread-8] INFO  backtype.storm.daemon.supervisor - Finished downloading code for storm id log-analysis-topology-1-1423919412 from /tmp/d1acfa92-75c1-45f7-91f3-0d7f895f9bac/nimbus/stormdist/log-analysis-topology-1-1423919412
+12645 [Thread-9] INFO  backtype.storm.daemon.supervisor - Launching worker with assignment #backtype.storm.daemon.supervisor.LocalAssignment{:storm-id "log-analysis-topology-1-1423919412", :executors ([3 3] [5 5] [4 4] [2 2] [1 1])} for this supervisor ef6b0f59-d80c-4c12-8391-db5b0712d42e on port 1027 with id d399624d-8bd2-431f-9e9d-51945fdf96b2
+12655 [Thread-9] INFO  backtype.storm.daemon.worker - Launching worker for log-analysis-topology-1-1423919412 on ef6b0f59-d80c-4c12-8391-db5b0712d42e:1027 with id d399624d-8bd2-431f-9e9d-51945fdf96b2 and conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/de44b361-3756-47b6-81cd-ccf127aacf3d", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+12663 [Thread-9] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+12696 [Thread-9-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+12697 [Thread-9] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+12945 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor $spoutcoord-spout0:[2 2]
+12952 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks $spoutcoord-spout0:[2 2]
+12959 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor $spoutcoord-spout0:[2 2]
+12969 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor __acker:[3 3]
+13005 [Thread-16-$spoutcoord-spout0] INFO  backtype.storm.daemon.executor - Preparing bolt $spoutcoord-spout0:(2)
+13009 [Thread-16-$spoutcoord-spout0] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+13060 [Thread-16-$spoutcoord-spout0] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+13097 [Thread-16-$spoutcoord-spout0] INFO  backtype.storm.daemon.executor - Prepared bolt $spoutcoord-spout0:(2)
+13099 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks __acker:[3 3]
+13103 [Thread-9] INFO  backtype.storm.daemon.executor - Timeouts disabled for executor __acker:[3 3]
+13111 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor __acker:[3 3]
+13133 [Thread-18-__acker] INFO  backtype.storm.daemon.executor - Preparing bolt __acker:(3)
+13144 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor b-0:[4 4]
+13148 [Thread-18-__acker] INFO  backtype.storm.daemon.executor - Prepared bolt __acker:(3)
+13188 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks b-0:[4 4]
+13202 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor b-0:[4 4]
+13203 [Thread-20-b-0] INFO  backtype.storm.daemon.executor - Preparing bolt b-0:(4)
+XMPP function is prepared prepare preapare prepare
+13260 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor spout0:[5 5]
+13265 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks spout0:[5 5]
+13266 [Thread-20-b-0] INFO  backtype.storm.daemon.executor - Prepared bolt b-0:(4)
+13276 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor spout0:[5 5]
+13278 [Thread-22-spout0] INFO  backtype.storm.daemon.executor - Preparing bolt spout0:(5)
+13282 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor __system:[-1 -1]
+13313 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks __system:[-1 -1]
+13324 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor __system:[-1 -1]
+13338 [Thread-24-__system] INFO  backtype.storm.daemon.executor - Preparing bolt __system:(-1)
+13386 [Thread-9] INFO  backtype.storm.daemon.executor - Loading executor $mastercoord-bg0:[1 1]
+13391 [Thread-9] INFO  backtype.storm.daemon.executor - Loaded executor tasks $mastercoord-bg0:[1 1]
+13403 [Thread-24-__system] INFO  backtype.storm.daemon.executor - Prepared bolt __system:(-1)
+13470 [Thread-9] INFO  backtype.storm.daemon.executor - Finished loading executor $mastercoord-bg0:[1 1]
+13472 [Thread-9] INFO  backtype.storm.daemon.worker - Launching receive-thread for ef6b0f59-d80c-4c12-8391-db5b0712d42e:1027
+13473 [Thread-26-$mastercoord-bg0] INFO  backtype.storm.daemon.executor - Opening spout $mastercoord-bg0:(1)
+13480 [Thread-26-$mastercoord-bg0] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+13546 [Thread-9] INFO  backtype.storm.daemon.worker - Worker has topology config {"storm.id" "log-analysis-topology-1-1423919412", "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/de44b361-3756-47b6-81cd-ccf127aacf3d", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.kryo.decorators" (), "topology.name" "log-analysis-topology", "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 30, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.kryo.register" {"storm.trident.topology.TransactionAttempt" nil}, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+13550 [Thread-9] INFO  backtype.storm.daemon.worker - Worker d399624d-8bd2-431f-9e9d-51945fdf96b2 for storm log-analysis-topology-1-1423919412 on ef6b0f59-d80c-4c12-8391-db5b0712d42e:1027 has finished loading
+13582 [Thread-26-$mastercoord-bg0] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl - Starting
+13637 [Thread-26-$mastercoord-bg0] INFO  backtype.storm.daemon.executor - Opened spout $mastercoord-bg0:(1)
+13638 [Thread-26-$mastercoord-bg0] INFO  backtype.storm.daemon.executor - Activating spout $mastercoord-bg0:(1)
+13698 [Thread-22-spout0] INFO  backtype.storm.daemon.executor - Prepared bolt spout0:(5)
+2015-03-07 01:00:14
+XMPP function is executed -----------------------------
+2015-03-07 01:00:14
+2015-03-07 01:00:13
+XMPP function is executed -----------------------------
+2015-03-07 01:00:13
+2015-03-07 01:00:12
+2015-03-07 01:00:12
+2015-03-07 01:00:11
+2015-03-07 01:00:11
+2015-03-07 01:00:10
+2015-03-07 01:00:10
+2015-03-07 01:00:09
+2015-03-07 01:00:16
+XMPP function is executed -----------------------------
+2015-03-07 01:00:16
+2015-03-07 01:00:15
+XMPP function is executed -----------------------------
+2015-03-07 01:00:15
+2015-03-07 01:00:09
+2015-03-07 01:00:08
+2015-03-07 01:00:08
+2015-03-07 01:00:07
+2015-03-07 01:00:07
+2015-03-07 01:00:06
+2015-03-07 01:00:06
+2015-03-07 01:00:05
+2015-03-07 01:00:05
+2015-03-07 01:00:04
+2015-03-07 01:00:04
+2015-03-07 01:00:03
+2015-03-07 01:00:03
+2015-03-07 01:00:02
+2015-03-07 01:00:02
+2015-03-07 01:00:01
+2015-03-07 01:00:01
+2015-03-07 01:00:00
+2015-03-07 01:00:00
+2015-03-07 00:59:59
+2015-03-07 00:59:59
+2015-03-07 00:59:58
+2015-03-07 00:59:58
+2015-03-07 00:59:57
+2015-03-07 00:59:57
+2015-03-07 00:59:56
+2015-03-07 00:59:56
+2015-03-07 00:59:55
+2015-03-07 00:59:55
+2015-03-07 00:59:54
+2015-03-07 00:59:54
+2015-03-07 00:59:53
+2015-03-07 00:59:53
+2015-03-07 00:59:52
+2015-03-07 00:59:52
+2015-03-07 01:00:18
+XMPP function is executed -----------------------------
+2015-03-07 01:00:18
+2015-03-07 01:00:17
+XMPP function is executed -----------------------------
+2015-03-07 01:00:17
+2015-03-07 00:59:51
+2015-03-07 00:59:51
+2015-03-07 00:59:50
+2015-03-07 00:59:50
+2015-03-07 00:59:49
+2015-03-07 00:59:49
+2015-03-07 00:59:48
+2015-03-07 00:59:48
+2015-03-07 00:59:47
+2015-03-07 00:59:47
+2015-03-07 00:59:46
+2015-03-07 00:59:46
+2015-03-07 00:59:45
+2015-03-07 00:59:45
+2015-03-07 00:59:44
+2015-03-07 00:59:44
+2015-03-07 00:59:43
+2015-03-07 00:59:43
+2015-03-07 00:59:42
+2015-03-07 00:59:42
+2015-03-07 00:59:41
+2015-03-07 00:59:41
+2015-03-07 00:59:40
+2015-03-07 00:59:40
+2015-03-07 00:59:39
+2015-03-07 00:59:39
+2015-03-07 00:59:38
+2015-03-07 00:59:38
+2015-03-07 00:59:37
+2015-03-07 00:59:37
+2015-03-07 00:59:36
+2015-03-07 00:59:36
+2015-03-07 00:59:35
+2015-03-07 00:59:35
+2015-03-07 00:59:34
+2015-03-07 01:00:20
+XMPP function is executed -----------------------------
+2015-03-07 01:00:20
+2015-03-07 01:00:19
+XMPP function is executed -----------------------------
+2015-03-07 01:00:19
+2015-03-07 00:59:34
+2015-03-07 00:59:33
+2015-03-07 00:59:33
+2015-03-07 00:59:32
+2015-03-07 00:59:32
+2015-03-07 00:59:31
+2015-03-07 00:59:31
+2015-03-07 00:59:30
+2015-03-07 00:59:30
+2015-03-07 00:59:29
+2015-03-07 00:59:29
+2015-03-07 00:59:28
+2015-03-07 00:59:28
+2015-03-07 00:59:27
+2015-03-07 00:59:27
+2015-03-07 00:59:26
+2015-03-07 00:59:26
+2015-03-07 00:59:25
+2015-03-07 00:59:25
+2015-03-07 00:59:24
+2015-03-07 00:59:24
+2015-03-07 00:59:23
+2015-03-07 00:59:23
+2015-03-07 00:59:22
+2015-03-07 00:59:22
+2015-03-07 00:59:21
+2015-03-07 00:59:21
+2015-03-07 00:59:20
+2015-03-07 00:59:20
+2015-03-07 00:59:19
+2015-03-07 00:59:19
+2015-03-07 00:59:18
+2015-03-07 00:59:18
+2015-03-07 00:59:17
+2015-03-07 01:00:22
+XMPP function is executed -----------------------------
+2015-03-07 01:00:22
+2015-03-07 01:00:21
+XMPP function is executed -----------------------------
+2015-03-07 01:00:21
+2015-03-07 00:59:17
+2015-03-07 00:59:16
+2015-03-07 00:59:16
+2015-03-07 00:59:15
+2015-03-07 00:59:15
+2015-03-07 00:59:14
+2015-03-07 00:59:14
+2015-03-07 00:59:13
+2015-03-07 00:59:13
+2015-03-07 00:59:12
+2015-03-07 00:59:12
+2015-03-07 00:59:11
+2015-03-07 00:59:11
+2015-03-07 00:59:10
+2015-03-07 00:59:10
+2015-03-07 00:59:09
+2015-03-07 00:59:09
+2015-03-07 00:59:08
+2015-03-07 00:59:08
+2015-03-07 00:59:07
+2015-03-07 00:59:07
+2015-03-07 00:59:06
+2015-03-07 00:59:06
+2015-03-07 00:59:05
+2015-03-07 00:59:05
+2015-03-07 00:59:04
+2015-03-07 00:59:04
+2015-03-07 00:59:03
+2015-03-07 00:59:03
+2015-03-07 00:59:02
+2015-03-07 00:59:02
+2015-03-07 00:59:01
+2015-03-07 00:59:01
+2015-03-07 00:59:00
+2015-03-07 00:59:00
+2015-03-07 01:00:24
+XMPP function is executed -----------------------------
+2015-03-07 01:00:24
+2015-03-07 01:00:23
+XMPP function is executed -----------------------------
+2015-03-07 01:00:23
+2015-03-07 00:58:59
+2015-03-07 00:58:59
+2015-03-07 00:58:58
+2015-03-07 00:58:58
+2015-03-07 00:58:57
+2015-03-07 00:58:57
+2015-03-07 00:58:56
+2015-03-07 00:58:56
+2015-03-07 00:58:55
+2015-03-07 00:58:55
+2015-03-07 00:58:54
+2015-03-07 00:58:54
+2015-03-07 00:58:53
+2015-03-07 00:58:53
+2015-03-07 00:58:52
+2015-03-07 00:58:52
+2015-03-07 00:58:51
+2015-03-07 00:58:51
+2015-03-07 00:58:50
+2015-03-07 00:58:50
+2015-03-07 00:58:49
+2015-03-07 00:58:49
+2015-03-07 00:58:48
+2015-03-07 00:58:48
+2015-03-07 00:58:47
+2015-03-07 00:58:47
+2015-03-07 00:58:46
+2015-03-07 00:58:46
+2015-03-07 00:58:45
+2015-03-07 00:58:45
+2015-03-07 00:58:44
+2015-03-07 00:58:44
+2015-03-07 00:58:43
+2015-03-07 00:58:43
+2015-03-07 00:58:42
+2015-03-07 01:00:26
+XMPP function is executed -----------------------------
+2015-03-07 01:00:26
+2015-03-07 01:00:25
+XMPP function is executed -----------------------------
+2015-03-07 01:00:25
+2015-03-07 00:58:42
+2015-03-07 00:58:41
+2015-03-07 00:58:41
+2015-03-07 00:58:40
+2015-03-07 00:58:40
+2015-03-07 00:58:39
+2015-03-07 00:58:39
+2015-03-07 00:58:38
+2015-03-07 00:58:38
+2015-03-07 00:58:37
+2015-03-07 00:58:37
+2015-03-07 00:58:36
+2015-03-07 00:58:36
+2015-03-07 00:58:35
+2015-03-07 00:58:35
+2015-03-07 00:58:34
+2015-03-07 00:58:34
+2015-03-07 00:58:33
+2015-03-07 00:58:33
+2015-03-07 00:58:32
+2015-03-07 00:58:32
+2015-03-07 00:58:31
+2015-03-07 00:58:31
+2015-03-07 00:53:14
+XMPP function is executed -----------------------------
+2015-03-07 00:53:14
+XMPP function is executed -----------------------------
+2015-03-07 00:53:13
+2015-03-07 00:53:13
+2015-03-07 00:53:12
+2015-03-07 00:53:12
+2015-03-07 00:53:11
+2015-03-07 00:53:11
+2015-03-07 00:53:10
+2015-03-07 00:53:10
+2015-03-07 00:53:09
+2015-03-07 00:53:09
+2015-03-07 01:00:28
+XMPP function is executed -----------------------------
+2015-03-07 01:00:28
+2015-03-07 01:00:27
+XMPP function is executed -----------------------------
+2015-03-07 01:00:27
+2015-03-07 00:53:08
+XMPP function is executed -----------------------------
+2015-03-07 00:53:08
+XMPP function is executed -----------------------------
+2015-03-07 00:53:07
+2015-03-07 00:53:07
+2015-03-07 00:53:06
+2015-03-07 00:53:06
+2015-03-07 00:53:05
+2015-03-07 00:53:05
+2015-03-07 00:53:04
+2015-03-07 00:53:04
+2015-03-07 00:53:03
+2015-03-07 00:53:03
+2015-03-07 00:53:02
+2015-03-07 00:53:02
+2015-03-07 00:53:01
+2015-03-07 00:53:01
+2015-03-07 00:53:00
+2015-03-07 00:53:00
+2015-03-07 00:52:59
+2015-03-07 00:52:59
+2015-03-07 00:52:58
+2015-03-07 00:52:58
+2015-03-07 00:52:57
+2015-03-07 00:52:57
+2015-03-07 00:52:56
+2015-03-07 00:52:56
+2015-03-07 00:52:55
+2015-03-07 00:52:55
+2015-03-07 00:52:54
+2015-03-07 00:52:54
+2015-03-07 00:52:53
+2015-03-07 00:52:53
+2015-03-07 00:52:52
+2015-03-07 00:52:52
+2015-03-07 00:52:51
+2015-03-07 01:00:30
+XMPP function is executed -----------------------------
+2015-03-07 01:00:30
+2015-03-07 01:00:29
+XMPP function is executed -----------------------------
+2015-03-07 01:00:29
+2015-03-07 00:52:51
+XMPP function is executed -----------------------------
+2015-03-07 00:52:50
+XMPP function is executed -----------------------------
+2015-03-07 00:52:50
+2015-03-07 00:52:49
+2015-03-07 00:52:49
+2015-03-07 00:52:48
+2015-03-07 00:52:48
+2015-03-07 00:52:47
+2015-03-07 00:52:47
+2015-03-07 00:52:46
+2015-03-07 00:52:46
+2015-03-07 00:52:45
+2015-03-07 00:52:45
+2015-03-07 00:52:44
+2015-03-07 00:52:44
+2015-03-07 00:52:43
+2015-03-07 00:52:43
+2015-03-07 00:52:42
+2015-03-07 00:52:42
+2015-03-07 00:52:41
+2015-03-07 00:52:41
+2015-03-07 00:52:40
+2015-03-07 00:52:40
+2015-03-07 00:52:39
+2015-03-07 00:52:39
+2015-03-07 00:52:38
+2015-03-07 00:52:38
+2015-03-07 00:52:37
+2015-03-07 00:52:37
+2015-03-07 00:52:36
+2015-03-07 00:52:36
+2015-03-07 00:52:35
+2015-03-07 00:52:35
+2015-03-07 00:52:34
+2015-03-07 00:52:34
+2015-03-07 01:00:32
+XMPP function is executed -----------------------------
+2015-03-07 01:00:32
+2015-03-07 01:00:31
+XMPP function is executed -----------------------------
+2015-03-07 01:00:31
+2015-03-07 00:52:33
+XMPP function is executed -----------------------------
+2015-03-07 00:52:33
+XMPP function is executed -----------------------------
+2015-03-07 00:52:32
+2015-03-07 00:52:32
+2015-03-07 00:52:31
+2015-03-07 00:52:31
+2015-03-07 00:52:30
+2015-03-07 00:52:30
+2015-03-07 00:52:29
+2015-03-07 00:52:29
+2015-03-07 00:52:28
+2015-03-07 00:52:28
+2015-03-07 00:52:27
+2015-03-07 00:52:27
+2015-03-07 00:52:26
+2015-03-07 00:52:26
+2015-03-07 00:52:25
+2015-03-07 00:52:25
+2015-03-07 00:52:24
+2015-03-07 00:52:24
+2015-03-07 00:52:23
+2015-03-07 00:52:23
+2015-03-07 00:52:22
+2015-03-07 00:52:22
+2015-03-07 00:52:21
+2015-03-07 00:52:21
+2015-03-07 00:52:20
+2015-03-07 00:52:20
+2015-03-07 00:52:19
+2015-03-07 00:52:19
+2015-03-07 00:52:18
+2015-03-07 00:52:18
+2015-03-07 00:52:17
+2015-03-07 00:52:17
+2015-03-07 00:52:16
+2015-03-07 01:00:34
+XMPP function is executed -----------------------------
+2015-03-07 01:00:34
+2015-03-07 01:00:33
+XMPP function is executed -----------------------------
+2015-03-07 01:00:33
+2015-03-07 00:52:16
+XMPP function is executed -----------------------------
+2015-03-07 00:52:15
+XMPP function is executed -----------------------------
+2015-03-07 00:52:15
+2015-03-07 00:52:14
+2015-03-07 00:52:14
+2015-03-07 00:52:13
+2015-03-07 00:52:13
+2015-03-07 00:52:12
+2015-03-07 00:52:12
+2015-03-07 00:52:11
+2015-03-07 00:52:11
+2015-03-07 00:52:10
+2015-03-07 00:52:10
+2015-03-07 00:52:09
+2015-03-07 00:52:09
+2015-03-07 00:52:08
+2015-03-07 00:52:08
+2015-03-07 00:52:07
+2015-03-07 00:52:07
+2015-03-07 00:52:06
+2015-03-07 00:52:06
+2015-03-07 00:52:05
+2015-03-07 00:52:05
+2015-03-07 00:52:04
+2015-03-07 00:52:04
+2015-03-07 00:52:03
+2015-03-07 00:52:03
+2015-03-07 00:52:02
+2015-03-07 00:52:02
+2015-03-07 00:52:01
+2015-03-07 00:52:01
+2015-03-07 00:52:00
+2015-03-07 00:52:00
+2015-03-07 00:51:59
+2015-03-07 00:51:59
+2015-03-07 01:00:36
+XMPP function is executed -----------------------------
+2015-03-07 01:00:36
+2015-03-07 01:00:35
+XMPP function is executed -----------------------------
+2015-03-07 01:00:35
+2015-03-07 00:51:58
+XMPP function is executed -----------------------------
+2015-03-07 00:51:58
+XMPP function is executed -----------------------------
+2015-03-07 00:51:57
+2015-03-07 00:51:57
+2015-03-07 00:51:56
+2015-03-07 00:51:56
+2015-03-07 00:51:55
+2015-03-07 00:51:55
+2015-03-07 00:51:54
+2015-03-07 00:51:54
+2015-03-07 00:51:53
+2015-03-07 00:51:53
+2015-03-07 00:51:52
+2015-03-07 00:51:52
+2015-03-07 00:51:51
+2015-03-07 00:51:51
+2015-03-07 00:51:50
+2015-03-07 00:51:50
+2015-03-07 00:51:49
+2015-03-07 00:51:49
+2015-03-07 00:51:48
+2015-03-07 00:51:48
+2015-03-07 00:51:47
+2015-03-07 00:51:47
+2015-03-07 00:51:46
+2015-03-07 00:51:46
+2015-03-07 00:51:45
+2015-03-07 00:51:45
+2015-03-07 00:51:44
+2015-03-07 00:51:44
+2015-03-07 00:51:43
+2015-03-07 00:51:43
+2015-03-07 00:51:42
+2015-03-07 00:51:42
+2015-03-07 00:51:41
+2015-03-07 01:00:38
+XMPP function is executed -----------------------------
+2015-03-07 01:00:38
+2015-03-07 01:00:37
+XMPP function is executed -----------------------------
+2015-03-07 01:00:37
+2015-03-07 00:51:41
+XMPP function is executed -----------------------------
+2015-03-07 00:51:40
+XMPP function is executed -----------------------------
+2015-03-07 00:51:40
+2015-03-07 00:51:39
+2015-03-07 00:51:39
+2015-03-07 00:51:38
+2015-03-07 00:51:38
+2015-03-07 00:51:37
+2015-03-07 00:51:37
+2015-03-07 00:51:36
+2015-03-07 00:51:36
+2015-03-07 00:51:35
+2015-03-07 00:51:35
+2015-03-07 00:51:34
+2015-03-07 00:51:34
+2015-03-07 00:51:33
+2015-03-07 00:51:33
+2015-03-07 00:51:32
+2015-03-07 00:51:32
+2015-03-07 00:51:31
+2015-03-07 00:51:31
+2015-03-07 00:51:30
+2015-03-07 00:51:30
+2015-03-07 00:51:29
+2015-03-07 00:51:29
+2015-03-07 00:51:28
+2015-03-07 00:51:28
+2015-03-07 00:51:27
+2015-03-07 00:51:27
+2015-03-07 00:51:26
+2015-03-07 00:51:26
+2015-03-07 00:51:25
+2015-03-07 00:51:25
+2015-03-07 00:51:24
+2015-03-07 00:51:24
+2015-03-07 01:00:40
+XMPP function is executed -----------------------------
+2015-03-07 01:00:40
+2015-03-07 01:00:39
+XMPP function is executed -----------------------------
+2015-03-07 01:00:39
+2015-03-07 00:51:23
+XMPP function is executed -----------------------------
+2015-03-07 00:51:23
+XMPP function is executed -----------------------------
+2015-03-07 00:51:22
+2015-03-07 00:51:22
+2015-03-07 00:51:21
+2015-03-07 00:51:21
+2015-03-07 00:51:20
+2015-03-07 00:51:20
+2015-03-07 00:51:19
+2015-03-07 00:51:19
+2015-03-07 00:51:18
+2015-03-07 00:51:18
+2015-03-07 00:51:17
+2015-03-07 00:51:17
+2015-03-07 00:51:16
+2015-03-07 00:51:16
+2015-03-07 00:51:15
+2015-03-07 00:51:15
+2015-03-07 00:51:14
+2015-03-07 00:51:14
+2015-03-07 00:51:13
+2015-03-07 00:51:13
+2015-03-07 00:51:12
+2015-03-07 00:51:12
+2015-03-07 00:51:11
+2015-03-07 00:51:11
+2015-03-07 00:51:10
+2015-03-07 00:51:10
+2015-03-07 00:51:09
+2015-03-07 00:51:09
+2015-03-07 00:51:08
+2015-03-07 00:51:08
+2015-03-07 00:51:07
+2015-03-07 00:51:07
+2015-03-07 00:51:06
+2015-03-07 01:00:42
+XMPP function is executed -----------------------------
+2015-03-07 01:00:42
+2015-03-07 01:00:41
+XMPP function is executed -----------------------------
+2015-03-07 01:00:41
+2015-03-07 00:51:06
+XMPP function is executed -----------------------------
+2015-03-07 00:51:05
+XMPP function is executed -----------------------------
+2015-03-07 00:51:05
+2015-03-07 00:51:04
+2015-03-07 00:51:04
+2015-03-07 00:51:03
+2015-03-07 00:51:03
+2015-03-07 00:51:02
+2015-03-07 00:51:02
+2015-03-07 00:51:01
+2015-03-07 00:51:01
+2015-03-07 00:51:00
+2015-03-07 00:51:00
+2015-03-07 00:50:59
+2015-03-07 00:50:59
+2015-03-07 00:50:58
+2015-03-07 00:50:58
+2015-03-07 00:50:57
+2015-03-07 00:50:57
+2015-03-07 00:50:56
+2015-03-07 00:50:56
+2015-03-07 00:50:55
+2015-03-07 00:50:55
+2015-03-07 00:50:54
+2015-03-07 00:50:54
+2015-03-07 00:50:53
+2015-03-07 00:50:53
+2015-03-07 00:50:52
+2015-03-07 00:50:52
+2015-03-07 00:50:51
+2015-03-07 00:50:51
+2015-03-07 00:50:50
+2015-03-07 00:50:50
+2015-03-07 00:50:49
+2015-03-07 00:50:49
+2015-03-07 01:00:44
+XMPP function is executed -----------------------------
+2015-03-07 01:00:44
+2015-03-07 01:00:43
+XMPP function is executed -----------------------------
+2015-03-07 01:00:43
+2015-03-07 00:50:48
+XMPP function is executed -----------------------------
+2015-03-07 00:50:48
+XMPP function is executed -----------------------------
+2015-03-07 00:50:47
+2015-03-07 00:50:47
+2015-03-07 00:50:46
+2015-03-07 00:50:46
+2015-03-07 00:50:45
+2015-03-07 00:50:45
+2015-03-07 00:50:44
+2015-03-07 00:50:44
+2015-03-07 00:50:43
+2015-03-07 00:50:43
+2015-03-07 00:50:42
+2015-03-07 00:50:42
+2015-03-07 00:50:41
+2015-03-07 00:50:41
+2015-03-07 00:50:40
+2015-03-07 00:50:40
+2015-03-07 00:50:39
+2015-03-07 00:50:39
+2015-03-07 00:50:38
+2015-03-07 00:50:38
+2015-03-07 00:50:37
+2015-03-07 00:50:37
+2015-03-07 00:50:36
+2015-03-07 00:50:36
+2015-03-07 00:50:35
+2015-03-07 00:50:35
+2015-03-07 00:50:34
+2015-03-07 00:50:34
+2015-03-07 00:50:33
+2015-03-07 00:50:33
+2015-03-07 00:50:32
+2015-03-07 00:50:32
+2015-03-07 01:00:46
+XMPP function is executed -----------------------------
+2015-03-07 01:00:46
+2015-03-07 01:00:45
+XMPP function is executed -----------------------------
+2015-03-07 01:00:45
+2015-03-07 00:50:31
+XMPP function is executed -----------------------------
+2015-03-07 00:50:31
+XMPP function is executed -----------------------------
+2015-03-07 00:50:30
+2015-03-07 00:50:30
+2015-03-07 00:50:29
+2015-03-07 00:50:29
+2015-03-07 00:50:28
+2015-03-07 00:50:28
+2015-03-07 00:50:27
+2015-03-07 00:50:27
+2015-03-07 00:50:26
+2015-03-07 00:50:26
+2015-03-07 00:50:25
+2015-03-07 00:50:25
+2015-03-07 00:50:24
+2015-03-07 00:50:24
+2015-03-07 00:50:23
+2015-03-07 00:50:23
+2015-03-07 00:50:22
+2015-03-07 00:50:22
+2015-03-07 00:50:21
+2015-03-07 00:50:21
+2015-03-07 00:50:20
+2015-03-07 00:50:20
+2015-03-07 00:50:19
+2015-03-07 00:50:19
+2015-03-07 00:50:18
+2015-03-07 00:50:18
+2015-03-07 00:50:17
+2015-03-07 00:50:17
+2015-03-07 00:50:16
+2015-03-07 00:50:16
+2015-03-07 00:50:15
+2015-03-07 00:50:15
+2015-03-07 01:00:48
+XMPP function is executed -----------------------------
+2015-03-07 01:00:48
+2015-03-07 01:00:47
+XMPP function is executed -----------------------------
+2015-03-07 01:00:47
+2015-03-07 00:50:14
+XMPP function is executed -----------------------------
+2015-03-07 00:50:14
+XMPP function is executed -----------------------------
+2015-03-07 00:50:13
+2015-03-07 00:50:13
+2015-03-07 00:50:12
+2015-03-07 00:50:12
+2015-03-07 00:50:11
+2015-03-07 00:50:11
+2015-03-07 00:50:10
+2015-03-07 00:50:10
+2015-03-07 00:50:09
+2015-03-07 00:50:09
+2015-03-07 00:50:08
+2015-03-07 00:50:08
+2015-03-07 00:50:07
+2015-03-07 00:50:07
+2015-03-07 00:50:06
+2015-03-07 00:50:06
+2015-03-07 00:50:05
+2015-03-07 00:50:05
+2015-03-07 00:50:04
+2015-03-07 00:50:04
+2015-03-07 00:50:03
+2015-03-07 00:50:03
+2015-03-07 00:50:02
+2015-03-07 00:50:02
+2015-03-07 00:50:01
+2015-03-07 00:50:01
+2015-03-07 00:50:00
+2015-03-07 00:50:00
+2015-03-07 00:49:59
+2015-03-07 00:49:59
+2015-03-07 00:49:58
+2015-03-07 00:49:58
+2015-03-07 00:49:57
+2015-03-07 01:00:50
+XMPP function is executed -----------------------------
+2015-03-07 01:00:50
+2015-03-07 01:00:49
+XMPP function is executed -----------------------------
+2015-03-07 01:00:49
+2015-03-07 00:49:57
+XMPP function is executed -----------------------------
+2015-03-07 00:49:56
+XMPP function is executed -----------------------------
+2015-03-07 00:49:56
+2015-03-07 00:49:55
+2015-03-07 00:49:55
+2015-03-07 00:49:54
+2015-03-07 00:49:54
+2015-03-07 00:49:53
+2015-03-07 00:49:53
+2015-03-07 00:49:52
+2015-03-07 00:49:52
+2015-03-07 00:49:51
+2015-03-07 00:49:51
+2015-03-07 00:49:50
+2015-03-07 00:49:50
+2015-03-07 00:49:49
+2015-03-07 00:49:49
+2015-03-07 00:49:48
+2015-03-07 00:49:48
+2015-03-07 00:49:47
+2015-03-07 00:49:47
+2015-03-07 00:49:46
+2015-03-07 00:49:46
+2015-03-07 00:49:45
+2015-03-07 00:49:45
+2015-03-07 00:49:44
+2015-03-07 00:49:44
+2015-03-07 00:49:43
+2015-03-07 00:49:43
+2015-03-07 00:49:42
+2015-03-07 00:49:42
+2015-03-07 00:49:41
+2015-03-07 00:49:41
+2015-03-07 00:49:40
+2015-03-07 00:49:40
+2015-03-07 01:00:52
+XMPP function is executed -----------------------------
+2015-03-07 01:00:52
+2015-03-07 01:00:51
+XMPP function is executed -----------------------------
+2015-03-07 01:00:51
+2015-03-07 00:49:39
+XMPP function is executed -----------------------------
+2015-03-07 00:49:39
+XMPP function is executed -----------------------------
+2015-03-07 00:49:38
+2015-03-07 00:49:38
+2015-03-07 00:49:37
+2015-03-07 00:49:37
+2015-03-07 00:49:36
+2015-03-07 00:49:36
+2015-03-07 00:49:35
+2015-03-07 00:49:35
+2015-03-07 00:49:34
+2015-03-07 00:49:34
+2015-03-07 00:49:33
+2015-03-07 00:49:33
+2015-03-07 00:49:32
+2015-03-07 00:49:32
+2015-03-07 00:49:31
+2015-03-07 00:49:31
+2015-03-07 00:49:30
+2015-03-07 00:49:30
+2015-03-07 00:49:29
+2015-03-07 00:49:29
+2015-03-07 00:49:28
+2015-03-07 00:49:28
+2015-03-07 00:49:27
+2015-03-07 00:49:27
+2015-03-07 00:49:26
+2015-03-07 00:49:26
+2015-03-07 00:49:25
+2015-03-07 00:49:25
+2015-03-07 00:49:24
+2015-03-07 00:49:24
+2015-03-07 00:49:23
+2015-03-07 00:49:23
+2015-03-07 00:49:22
+2015-03-07 01:00:54
+XMPP function is executed -----------------------------
+2015-03-07 01:00:54
+2015-03-07 01:00:53
+XMPP function is executed -----------------------------
+2015-03-07 01:00:53
+2015-03-07 00:49:22
+XMPP function is executed -----------------------------
+2015-03-07 00:49:21
+XMPP function is executed -----------------------------
+2015-03-07 00:49:21
+2015-03-07 00:49:20
+2015-03-07 00:49:20
+2015-03-07 00:49:19
+2015-03-07 00:49:19
+2015-03-07 00:49:18
+2015-03-07 00:49:18
+2015-03-07 00:49:17
+2015-03-07 00:49:17
+2015-03-07 00:49:16
+2015-03-07 00:49:16
+2015-03-07 00:49:15
+2015-03-07 00:49:15
+2015-03-07 00:49:14
+2015-03-07 00:49:14
+2015-03-07 00:49:13
