@@ -16,11 +16,11 @@ public class ThreasholdFilterFunction extends BaseFunction {
 
 	
 	private static enum State{
-		NEAR,FAR
+		NEAR,FAR,NONE
 //		BELOW, ABOVE
 	}
 	
-	private State last = State.FAR;
+	private State last = State.NONE;
 	private double threshold;
 	
 	public  ThreasholdFilterFunction(double threshold){
@@ -30,10 +30,12 @@ public class ThreasholdFilterFunction extends BaseFunction {
 	public void execute(TridentTuple tuple, TridentCollector collector) {
 		double val = tuple.getDouble(0);
 		State newState = val < this.threshold ? State.NEAR : State.FAR;
-		boolean stateChange = this.last != newState;
+		boolean stateChange = (this.last != newState && newState == State.NEAR);
+		this.last = newState;
+		System.out.println(stateChange);
 		collector.emit(new Values(stateChange, threshold));
 		
-		this.last = newState;
+		
 		
 		// TODO Auto-generated metshod stub
 		
